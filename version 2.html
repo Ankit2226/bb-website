@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revolutionize your trading with our Auto Trading Bot. Start trading today and make profitable, automated trades with ease.">
+    <title>Auto Trading Bot - Start Trading Now</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Chakra+Petch:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Ultra-Modern 2025 Styles with Enhanced Neon Effects */
+        :root {
+            --neon-primary: #00f7ff;
+            --neon-secondary: #fc00ff;
+            --neon-accent: #33ff33;
+            --neon-yellow: #fffc00;
+            --neon-blue: #0062ff;
+            --dark-bg: #0a0a12;
+            --darker-bg: #050508;
+            --card-bg: rgba(20, 20, 35, 0.7);
+            --glass-effect: rgba(255, 255, 255, 0.05);
+            --futuristic-font: 'Chakra Petch', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: white;
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 247, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(252, 0, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(51, 255, 51, 0.05) 0%, transparent 50%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Advanced Glowing text effect */
+        .glow-text {
+            text-shadow: 0 0 10px var(--neon-primary), 
+                        0 0 20px var(--neon-primary), 
+                        0 0 30px var(--neon-primary);
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+
+        .neon-border {
+            border: 2px solid transparent;
+            border-radius: 15px;
+            background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+                        linear-gradient(135deg, var(--neon-primary), var(--neon-secondary)) border-box;
+            box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .neon-border:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, var(--neon-primary), var(--neon-secondary));
+            z-index: -1;
+            border-radius: 17px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            filter: blur(15px);
+        }
+
+        .neon-border:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .neon-border:hover::before {
+            opacity: 0.5;
+        }
+
+        /* Modern 3D Card Effect */
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: all 0.8s ease;
+        }
+
+        .card-3d:hover {
+            transform: rotateX(5deg) rotateY(5deg);
+        }
+
+        /* Advanced Glassmorphism */
+        .glass {
+            backdrop-filter: blur(15px);
+            background: var(--glass-effect);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Futuristic UI Elements */
+        .neo-button {
+            background: linear-gradient(135deg, var(--neon-primary), var(--neon-secondary));
+            border: none;
+            border-radius: 50px;
+            padding: 16px 35px;
+            font-family: var(--futuristic-font);
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: white;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+            transition: all 0.4s ease;
+            z-index: 1;
+        }
+
+        .neo-button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.6s ease;
+            z-index: -1;
+        }
+
+        .neo-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 247, 255, 0.8);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .neo-button:hover:before {
+            left: 100%;
+        }
+
+        /* Enhanced progress bars */
+        .progress-container {
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-family: var(--futuristic-font);
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 20px;
+            background: linear-gradient(90deg, var(--neon-primary), var(--neon-secondary));
+            position: relative;
+            width: 0%;
+            transition: width 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                        transparent 0%, 
+                        rgba(255, 255, 255, 0.2) 50%, 
+                        transparent 100%);
+            animation: progressShine 2s infinite linear;
+            background-size: 200% 100%;
+        }
+
+        /* Animated stats counters */
+        .stat-counter {
+            font-size: 3em;
+            font-weight: bold;
+            font-family: var(--futuristic-font);
+            background: linear-gradient(to right, var(--neon-primary), var(--neon-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Trading statistics section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px 15px;
+            border-radius: 15px;
+            background: var(--card-bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -100%;
+            left: 0;
+            background: linear-gradient(to bottom, 
+                        rgba(0, 247, 255, 0.1) 0%, 
+                        transparent 100%);
+            z-index: -1;
+            transition: top 0.5s ease;
+        }
+
+        .stat-card:hover::before {
+            top: 0;
+        }
+
+        .stat-title {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(10, 10, 20, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            background: rgba(10, 10, 20, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            max-width: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--neon-primary);
+            box-shadow: 0 0 15px var(--neon-primary);
+            animation: pulse 2s infinite;
+        }
+
+        .logo-text {
+            margin-left: 15px;
+            font-weight: bold;
+            font-size: 1.5em;
+            font-family: var(--futuristic-font);
+            background: linear-gradient(to right, var(--neon-primary), var(--neon-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Mobile menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background: rgba(10, 10, 20, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1001;
+            transition: right 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .mobile-menu.open {
+            right: 0;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-menu-links {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .mobile-menu-link {
+            color: white;
+            text-decoration: none;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1.2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            width: 80%;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-link:hover {
+            background: linear-gradient(90deg, var(--neon-primary), var(--neon-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transform: translateX(10px);
+        }
+
+        /* Main Banner */
+        .main-banner {
+            margin-top: 100px;
+            text-align: center;
+            padding: 130px 20px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .holographic-sphere {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle at center, 
+                        rgba(0, 247, 255, 0.05) 0%, 
+                        rgba(252, 0, 255, 0.05) 50%, 
+                        transparent 70%);
+            z-index: -1;
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+
+        .holographic-sphere::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(
+                transparent 0deg,
+                rgba(0, 247, 255, 0.1) 72deg,
+                rgba(252, 0, 255, 0.1) 144deg,
+                rgba(51, 255, 51, 0.1) 216deg,
+                rgba(255, 252, 0, 0.1) 288deg,
+                transparent 360deg
+            );
+            animation: rotate 15s linear infinite reverse;
+        }
+
+        .banner-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: radial-gradient(circle at center, rgba(51, 255, 51, 0.1) 0%, transparent 70%);
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .main-banner h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease, glow 1.5s ease-in-out infinite alternate;
+            background: linear-gradient(45deg, var(--neon-primary), var(--neon-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            font-family: var(--futuristic-font);
+            letter-spacing: 1px;
+        }
+
+        .main-banner p {
+            font-size: 1.8em;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            animation: fadeIn 1.2s ease 0.5s both;
+        }
+
+        /* Enhanced CTA button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--neon-primary), var(--neon-secondary));
+            color: #fff;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+            animation: pulse 2s infinite, fadeIn 1s ease 1s both;
+            font-family: var(--futuristic-font);
+        }
+
+        .cta-button i {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.6s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 247, 255, 0.8);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .cta-button:hover:before {
+            left: 100%;
+        }
+
+        .cta-button:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Enhanced Countdown Timer */
+        .countdown-container {
+            text-align: center;
+            margin: 50px auto 0;
+            padding: 25px;
+            color: white;
+            border-radius: 20px;
+            display: inline-block;
+            width: 100%;
+            max-width: 450px;
+            position: relative;
+            animation: fadeIn 1s ease 1.5s both;
+        }
+
+        .countdown-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            z-index: -1;
+            padding: 3px;
+            background: linear-gradient(135deg, var(--neon-primary), var(--neon-secondary));
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+            animation: borderGlow 3s infinite alternate;
+        }
+
+        .countdown-inner {
+            background: rgba(10, 10, 20, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-inner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                transparent 0deg,
+                rgba(0, 247, 255, 0.1) 90deg,
+                transparent 180deg,
+                rgba(252, 0, 255, 0.1) 270deg,
+                transparent 360deg
+            );
+            animation: rotate 10s linear infinite;
+            z-index: -1;
+        }
+
+        .countdown {
+            font-size: 3.5em;
+            font-weight: bold;
+            font-family: var(--futuristic-font);
+            color: white;
+            text-shadow: 0 0 15px var(--neon-primary);
+            letter-spacing: 2px;
+            padding: 10px 15px;
+            border-radius: 15px;
+            position: relative;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, rgba(10, 10, 20, 0.8), rgba(20, 20, 40, 0.8));
+        }
+
+        .countdown::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--neon-primary), var(--neon-secondary));
+            z-index: -1;
+            border-radius: 17px;
+            opacity: 0.5;
+            filter: blur(10px);
+        }
+
+        .trial-message {
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-top: 15px;
+            background: linear-gradient(to right, var(--neon-accent), var(--neon-primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pulse 2s infinite;
+            font-family: var(--futuristic-font);
+            letter-spacing: 1px;
+        }
+
+        /* Sections */
+        .section {
+            margin: 130px 0;
+            position: relative;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 60px;
+            background: linear-gradient(to right, var(--neon-primary), var(--neon-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: var(--futuristic-font);
+            letter-spacing: 2px;
+        }
+
+        .section h2:after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--neon-primary), var(--neon-secondary));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-item, .step-item, .testimonial-item, .faq-item {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item:before, .step-item:before, .testimonial-item:before, .faq-item:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--neon-primary), var(--neon-secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .feature-item:hover:before, .step-item:hover:before, 
+        .testimonial-item:hover:before, .faq-item:hover:before {
+            transform: scaleX(1);
+        }
+
+        .feature-item:hover, .step-item:hover, .testimonial-item:hover, .faq-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-icon, .step-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--neon-primary), var(--neon-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .feature-item h3, .step-item h3, .faq-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: white;
+            font-family: var(--futuristic-font);
+        }
+
+        .feature-item p, .step-item p, .testimonial-item p, .faq-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Trading stats section */
+        .live-trading {
+            background: rgba(10, 10, 20, 0.5);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .live-trading::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(
+                rgba(0, 247, 255, 0.1) 0%,
+                transparent 70%
+            );
+            z-index: -1;
+            animation: pulseRadial 10s infinite alternate;
+        }
+
+        .trading-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .trading-title {
+            font-size: 2em;
+            font-family: var(--futuristic-font);
+            background: linear-gradient(to right, var(--neon-primary), var(--neon-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .live-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2em;
+            color: var(--neon-accent);
+        }
+
+        .pulse-dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--neon-accent);
+            border-radius: 50%;
+            animation: pulseDot 1.5s infinite;
+        }
+
+        /* Advanced testimonials */
+        .testimonial-item {
+            text-align: left;
+            padding: 30px;
+            position: relative;
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-content:before {
+            content: """;
+            position: absolute;
+            left: -15px;
+            top: -20px;
+            font-size: 60px;
+            color: rgba(0, 247, 255, 0.3);
+            font-family: serif;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            border: 2px solid var(--neon-primary);
+            position: relative;
+        }
+
+        .testimonial-avatar::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--neon-primary), var(--neon-secondary));
+            z-index: -1;
+            border-radius: 50%;
+            animation: rotateBorder 3s linear infinite;
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: white;
+            font-family: var(--futuristic-font);
+        }
+
+        .author-position {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9em;
+        }
+
+        .rating {
+            margin-top: 8px;
+            color: #fffc00;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: all 0.5s ease;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(20, 20, 35, 0.7);
+            border-radius: 15px;
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            font-family: var(--futuristic-font);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--neon-primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background: rgba(30, 30, 50, 0.5);
+            border-radius: 0 0 15px 15px;
+            margin-top: -5px;
+            padding: 0 20px;
+        }
+
+        .faq-item.active .faq-question {
+            background: linear-gradient(135deg, rgba(0, 247, 255, 0.1), rgba(252, 0, 255, 0.1));
+            border-radius: 15px 15px 0 0;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 20px;
+        }
+
+        /* Advanced Chart Section */
+        .chart-section {
+            margin: 100px 0;
+            position: relative;
+        }
+
+        .chart-container {
+            height: 400px;
+            background: rgba(20, 20, 35, 0.7);
+            border-radius: 15px;
+			position: relative;
+           overflow: hidden;
+           margin-top: 50px;
+           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+       }
+
+       .chart-container::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           height: 2px;
+           background: linear-gradient(90deg, var(--neon-primary), var(--neon-secondary));
+           z-index: 2;
+       }
+
+       /* Fancy scrollbar */
+       ::-webkit-scrollbar {
+           width: 8px;
+           height: 8px;
+       }
+
+       ::-webkit-scrollbar-track {
+           background: rgba(255, 255, 255, 0.05);
+           border-radius: 10px;
+       }
+
+       ::-webkit-scrollbar-thumb {
+           background: linear-gradient(var(--neon-primary), var(--neon-secondary));
+           border-radius: 10px;
+       }
+
+       ::-webkit-scrollbar-thumb:hover {
+           background: linear-gradient(var(--neon-secondary), var(--neon-primary));
+       }
+
+       /* Footer */
+       footer {
+           background: linear-gradient(to right, rgba(10, 10, 20, 0.9), rgba(20, 20, 40, 0.9));
+           color: #fff;
+           text-align: center;
+           padding: 70px 0 30px;
+           margin-top: 100px;
+           position: relative;
+           overflow: hidden;
+       }
+
+       footer::before {
+           content: "";
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 2px;
+           background: linear-gradient(90deg, var(--neon-primary), var(--neon-secondary), var(--neon-primary));
+           animation: gradientFlow 5s linear infinite;
+           background-size: 200% 100%;
+       }
+
+       .footer-content {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+           gap: 40px;
+           margin-bottom: 40px;
+           text-align: left;
+       }
+
+       .footer-section h3 {
+           color: white;
+           font-size: 1.5em;
+           margin-bottom: 20px;
+           position: relative;
+           display: inline-block;
+           font-family: var(--futuristic-font);
+       }
+
+       .footer-section h3:after {
+           content: "";
+           position: absolute;
+           width: 40px;
+           height: 3px;
+           background: linear-gradient(to right, var(--neon-primary), var(--neon-secondary));
+           bottom: -10px;
+           left: 0;
+           border-radius: 2px;
+       }
+
+       .social-links {
+           display: flex;
+           gap: 15px;
+           margin-top: 20px;
+       }
+
+       .social-links a {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width: 45px;
+           height: 45px;
+           background: rgba(255, 255, 255, 0.1);
+           border-radius: 50%;
+           transition: all 0.3s ease;
+           color: white;
+           text-decoration: none;
+           position: relative;
+           overflow: hidden;
+       }
+
+       .social-links a::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: linear-gradient(135deg, var(--neon-primary), var(--neon-secondary));
+           opacity: 0;
+           transition: opacity 0.3s ease;
+           z-index: -1;
+       }
+
+       .social-links a:hover {
+           transform: translateY(-5px);
+       }
+
+       .social-links a:hover::before {
+           opacity: 1;
+       }
+
+       .footer-bottom {
+           border-top: 1px solid rgba(255, 255, 255, 0.1);
+           padding-top: 20px;
+           color: rgba(255, 255, 255, 0.7);
+           font-size: 0.9em;
+       }
+
+       /* Enhanced WhatsApp Button */
+       .floating-button {
+           position: fixed;
+           bottom: 30px;
+           right: 30px;
+           z-index: 1000;
+       }
+
+       .whatsapp-button {
+           display: flex;
+           align-items: center;
+           background: linear-gradient(135deg, #25D366, #128C7E);
+           color: white;
+           text-decoration: none;
+           padding: 15px 25px;
+           border-radius: 50px;
+           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+           transition: all 0.3s ease;
+           font-weight: 600;
+           font-family: var(--futuristic-font);
+           position: relative;
+           overflow: hidden;
+       }
+
+       .whatsapp-button::before {
+           content: '';
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           background: linear-gradient(45deg, 
+                       rgba(255, 255, 255, 0.1) 0%,
+                       transparent 50%,
+                       rgba(255, 255, 255, 0.1) 100%);
+           top: 0;
+           left: -100%;
+           transition: left 0.5s ease;
+       }
+
+       .whatsapp-button:hover {
+           transform: translateY(-5px) scale(1.05);
+           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+       }
+
+       .whatsapp-button:hover::before {
+           left: 100%;
+       }
+
+       .whatsapp-button i {
+           font-size: 1.5em;
+           margin-right: 10px;
+           animation: pulse 2s infinite;
+       }
+
+       /* Loading Animation */
+       .loader {
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: var(--dark-bg);
+           z-index: 9999;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           transition: opacity 0.5s ease, visibility 0.5s ease;
+       }
+
+       .loader.hidden {
+           opacity: 0;
+           visibility: hidden;
+       }
+
+       .loader-content {
+           text-align: center;
+       }
+
+       .loading-spinner {
+           width: 80px;
+           height: 80px;
+           border: 4px solid rgba(255, 255, 255, 0.1);
+           border-radius: 50%;
+           border-top: 4px solid var(--neon-primary);
+           animation: spin 1s linear infinite;
+           margin: 0 auto 20px;
+       }
+
+       .loading-text {
+           font-family: var(--futuristic-font);
+           font-size: 1.5em;
+           color: white;
+           background: linear-gradient(to right, var(--neon-primary), var(--neon-secondary));
+           -webkit-background-clip: text;
+           background-clip: text;
+           -webkit-text-fill-color: transparent;
+           animation: pulse 2s infinite;
+       }
+
+       /* Animations */
+       @keyframes fadeIn {
+           from { opacity: 0; }
+           to { opacity: 1; }
+       }
+
+       @keyframes fadeInDown {
+           from {
+               opacity: 0;
+               transform: translateY(-30px);
+           }
+           to {
+               opacity: 1;
+               transform: translateY(0);
+           }
+       }
+
+       @keyframes fadeInUp {
+           from {
+               opacity: 0;
+               transform: translateY(30px);
+           }
+           to {
+               opacity: 1;
+               transform: translateY(0);
+           }
+       }
+
+       @keyframes fadeInLeft {
+           from {
+               opacity: 0;
+               transform: translateX(-50px);
+           }
+           to {
+               opacity: 1;
+               transform: translateX(0);
+           }
+       }
+
+       @keyframes fadeInRight {
+           from {
+               opacity: 0;
+               transform: translateX(50px);
+           }
+           to {
+               opacity: 1;
+               transform: translateX(0);
+           }
+       }
+
+       @keyframes pulse {
+           0% { transform: scale(1); }
+           50% { transform: scale(1.05); }
+           100% { transform: scale(1); }
+       }
+
+       @keyframes pulseRadial {
+           0% { opacity: 0.3; }
+           50% { opacity: 0.7; }
+           100% { opacity: 0.3; }
+       }
+
+       @keyframes glow {
+           from {
+               text-shadow: 0 0 5px var(--neon-primary), 
+                           0 0 10px var(--neon-primary);
+           }
+           to {
+               text-shadow: 0 0 10px var(--neon-primary), 
+                           0 0 20px var(--neon-primary), 
+                           0 0 30px var(--neon-primary);
+           }
+       }
+
+       @keyframes borderGlow {
+           0% { box-shadow: 0 0 10px rgba(0, 247, 255, 0.5); }
+           100% { box-shadow: 0 0 30px rgba(0, 247, 255, 0.8); }
+       }
+
+       @keyframes gradientFlow {
+           0% { background-position: 0% 50%; }
+           100% { background-position: 200% 50%; }
+       }
+
+       @keyframes progressShine {
+           0% { background-position: -200% 0; }
+           100% { background-position: 200% 0; }
+       }
+
+       @keyframes pulseDot {
+           0% { transform: scale(1); opacity: 1; }
+           50% { transform: scale(1.5); opacity: 0.5; }
+           100% { transform: scale(1); opacity: 1; }
+       }
+
+       @keyframes rotateBorder {
+           0% { transform: rotate(0deg); }
+           100% { transform: rotate(360deg); }
+       }
+
+       @keyframes rotate {
+           0% { transform: translate(-50%, -50%) rotate(0deg); }
+           100% { transform: translate(-50%, -50%) rotate(360deg); }
+       }
+
+       @keyframes spin {
+           0% { transform: rotate(0deg); }
+           100% { transform: rotate(360deg); }
+       }
+
+       @keyframes textGlow {
+           0% { text-shadow: 0 0 5px var(--neon-primary), 0 0 10px var(--neon-primary); }
+           100% { text-shadow: 0 0 15px var(--neon-primary), 0 0 30px var(--neon-primary); }
+       }
+
+       /* Mobile Responsive Styles */
+       @media (max-width: 1200px) {
+           .stats-grid {
+               grid-template-columns: repeat(2, 1fr);
+           }
+       }
+
+       @media (max-width: 992px) {
+           .main-banner h1 {
+               font-size: 3em;
+           }
+
+           .section h2 {
+               font-size: 2.5em;
+           }
+       }
+
+       @media (max-width: 768px) {
+           nav {
+               display: none;
+           }
+
+           .hamburger {
+               display: block;
+           }
+
+           .main-banner h1 {
+               font-size: 2.5em;
+           }
+
+           .main-banner p {
+               font-size: 1.4em;
+           }
+
+           .countdown {
+               font-size: 2.8em;
+           }
+
+           .trial-message {
+               font-size: 1.3em;
+           }
+
+           .cta-button {
+               width: 90%;
+               max-width: 300px;
+               padding: 15px 30px;
+           }
+
+           .countdown-container {
+               width: 90%;
+           }
+
+           .grid-container {
+               grid-template-columns: 1fr;
+           }
+
+           .section h2 {
+               font-size: 2.2em;
+           }
+
+           .stats-grid {
+               grid-template-columns: 1fr;
+           }
+
+           .footer-content {
+               grid-template-columns: 1fr;
+               text-align: center;
+           }
+
+           .footer-section h3:after {
+               left: 50%;
+               transform: translateX(-50%);
+           }
+
+           .social-links {
+               justify-content: center;
+           }
+       }
+
+       @media (max-width: 480px) {
+           .main-banner {
+               padding: 100px 15px 70px;
+           }
+
+           .main-banner h1 {
+               font-size: 2em;
+           }
+
+           .main-banner p {
+               font-size: 1.2em;
+           }
+
+           .countdown {
+               font-size: 2.2em;
+           }
+
+           .trial-message {
+               font-size: 1.1em;
+           }
+
+           .section {
+               margin: 60px 0;
+           }
+
+           .section h2 {
+               font-size: 1.8em;
+           }
+
+           .feature-item, .step-item, .testimonial-item, .faq-item {
+               padding: 20px;
+           }
+
+           .header-content {
+               flex-direction: column;
+               text-align: center;
+           }
+
+           .logo-container {
+               margin-bottom: 15px;
+           }
+
+           .whatsapp-button {
+               padding: 12px 20px;
+           }
+
+           .whatsapp-button i {
+               font-size: 1.2em;
+           }
+       }
+   </style>
+</head>
+<body>
+   <!-- Page Loading Animation -->
+   <div class="loader" id="pageLoader">
+       <div class="loader-content">
+           <div class="loading-spinner"></div>
+           <p class="loading-text">Loading BinaryBeast...</p>
+       </div>
+   </div>
+
+   <!-- Header -->
+   <header id="header">
+       <div class="container">
+           <div class="header-content">
+               <div class="logo-container">
+                   <img src="https://i.ibb.co/mCcC3Kn/WBot-Logo.png" alt="Auto Trading Bot Logo">
+                   <div class="logo-text">BinaryBeast</div>
+               </div>
+               <nav>
+                   <!-- Navigation items could be added here -->
+               </nav>
+               <button class="hamburger" id="menuBtn">
+                   <i class="fas fa-bars"></i>
+               </button>
+           </div>
+       </div>
+   </header>
+
+   <!-- Mobile Menu -->
+   <div class="mobile-menu" id="mobileMenu">
+       <button class="close-menu" id="closeMenu">
+           <i class="fas fa-times"></i>
+       </button>
+       <div class="mobile-menu-links">
+           <a href="#features" class="mobile-menu-link">Features</a>
+           <a href="#how-it-works" class="mobile-menu-link">How It Works</a>
+           <a href="#performance" class="mobile-menu-link">Performance</a>
+           <a href="#testimonials" class="mobile-menu-link">Testimonials</a>
+           <a href="#faq" class="mobile-menu-link">FAQ</a>
+       </div>
+   </div>
+
+   <!-- Main Banner -->
+   <div class="main-banner">
+       <div class="holographic-sphere"></div>
+       <div class="banner-background"></div>
+       <div id="particles-js" class="particles"></div>
+       <div class="container">
+           <h1 class="animate-on-scroll" data-animation="fadeInDown">Revolutionize Your Trading with Our Auto Trading Bot</h1>
+           <p class="animate-on-scroll" data-animation="fadeIn">Automated, Profitable, and Effortless Trading at Your Fingertips</p>
+           <a href="https://chat.whatsapp.com/FKCn6m4yCmtK6CIllLzXIC" class="cta-button animate-on-scroll" data-animation="fadeIn">
+               <i class="fas fa-robot"></i> Start Trading Now
+           </a>
+       </div>
+       
+       <!-- Countdown Timer Section -->
+       <div class="countdown-container animate-on-scroll" data-animation="fadeIn">
+           <div class="countdown-border"></div>
+           <div class="countdown-inner">
+               <div id="countdown" class="countdown">30:00</div>
+               <p class="trial-message" id="trialMessage">Get Binary Beast Trial Now!</p>
+           </div>
+       </div>
+   </div>
+
+   <div class="container">
+       <!-- Trading Stats Section -->
+       <div class="section" id="performance">
+           <h2 class="animate-on-scroll" data-animation="fadeIn">Trading Performance</h2>
+           <div class="stats-grid animate-on-scroll" data-animation="fadeIn">
+               <div class="stat-card neon-border">
+                   <p class="stat-title">Success Rate</p>
+                   <div class="stat-counter" data-count="92">0</div>
+                   <span>%</span>
+                   <!-- Progress Bar Animation -->
+                   <div class="progress-container">
+                       <div class="progress-bar">
+                           <div class="progress-fill" data-progress="92"></div>
+                       </div>
+                   </div>
+               </div>
+               <div class="stat-card neon-border">
+                   <p class="stat-title">Monthly Return</p>
+                   <div class="stat-counter" data-count="27">0</div>
+                   <span>%</span>
+                   <div class="progress-container">
+                       <div class="progress-bar">
+                           <div class="progress-fill" data-progress="27"></div>
+                       </div>
+                   </div>
+               </div>
+               <div class="stat-card neon-border">
+                   <p class="stat-title">Active Users</p>
+                   <div class="stat-counter" data-count="3578">0</div>
+                   <div class="progress-container">
+                       <div class="progress-bar">
+                           <div class="progress-fill" data-progress="75"></div>
+                       </div>
+                   </div>
+               </div>
+               <div class="stat-card neon-border">
+                   <p class="stat-title">Daily Trades</p>
+                   <div class="stat-counter" data-count="154">0</div>
+                   <div class="progress-container">
+                       <div class="progress-bar">
+                           <div class="progress-fill" data-progress="65"></div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Live Trading Section -->
+           <div class="live-trading animate-on-scroll" data-animation="fadeIn">
+               <div class="trading-header">
+                   <h3 class="trading-title">Live Trading Performance</h3>
+                   <div class="live-indicator">
+                       <div class="pulse-dot"></div>
+                       <span>LIVE</span>
+                   </div>
+               </div>
+               <div class="chart-container" id="tradingChart">
+                   <!-- Trading chart will be rendered here by Chart.js -->
+               </div>
+           </div>
+       </div>
+
+       <!-- Features Section -->
+       <div class="section features" id="features">
+           <h2 class="animate-on-scroll" data-animation="fadeIn">Key Features</h2>
+           <div class="grid-container">
+               <div class="feature-item neon-border card-3d animate-on-scroll" data-animation="fadeInLeft">
+                   <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                   <h3>24/7 Trading</h3>
+                   <p>Our bot works around the clock to make profitable trades for you, never missing a market opportunity while you sleep.</p>
+                   <div class="progress-container">
+                       <div class="progress-label">
+                           <span>Efficiency</span>
+                           <span>98%</span>
+                       </div>
+                       <div class="progress-bar">
+                           <div class="progress-fill" data-progress="98"></div>
+                       </div>
+                   </div>
+               </div>
+               <div class="feature-item neon-border card-3d animate-on-scroll" data-animation="fadeIn">
+                   <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                   <h3>High Accuracy</h3>
+                   <p>With advanced AI-driven algorithms, we ensure highly accurate trades based on real-time market analysis and predictive modeling.</p>
+                   <div class="progress-container">
+                       <div class="progress-label">
+                           <span>Accuracy</span>
+                           <span>92%</span>
+                       </div>
+                       <div class="progress-bar">
+                           <div class="progress-fill" data-progress="92"></div>
+                       </div>
+                   </div>
+               </div>
+               <div class="feature-item neon-border card-3d animate-on-scroll" data-animation="fadeInRight">
+                   <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                   <h3>User-Friendly</h3>
+                   <p>No technical experience needed! Our intuitive interface makes automated trading accessible to everyone, from beginners to experts.</p>
+                   <div class="progress-container">
+                       <div class="progress-label">
+                           <span>User Satisfaction</span>
+                           <span>95%</span>
+                       </div>
+                       <div class="progress-bar">
+                           <div class="progress-fill" data-progress="95"></div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- How It Works Section -->
+       <div class="section how-it-works" id="how-it-works">
+           <h2 class="animate-on-scroll" data-animation="fadeIn">How It Works</h2>
+           <div class="grid-container">
+               <div class="step-item neon-border animate-on-scroll" data-animation="fadeInLeft">
+                   <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+                   <h3>Step 1: Sign Up</h3>
+                   <p>Register on our platform in less than 2 minutes with a few simple details to get started on your automated trading journey.</p>
+               </div>
+               <div class="step-item neon-border animate-on-scroll" data-animation="fadeIn">
+                   <div class="step-icon"><i class="fas fa-sliders-h"></i></div>
+                   <h3>Step 2: Set Preferences</h3>
+                   <p>Choose your trading preferences, risk tolerance, and investment amount. Let our smart system optimize your strategy for maximum returns.</p>
+               </div>
+               <div class="step-item neon-border animate-on-scroll" data-animation="fadeInRight">
+                   <div class="step-icon"><i class="fas fa-coins"></i></div>
+                   <h3>Step 3: Start Earning</h3>
+                   <p>Let the bot trade for you 24/7 while you sit back, relax, and watch your profits grow! Monitor performance in real-time on our dashboard.</p>
+               </div>
+           </div>
+       </div>
+
+       <!-- Testimonials Section -->
+       <div class="section testimonials" id="testimonials">
+           <h2 class="animate-on-scroll" data-animation="fadeIn">User Testimonials</h2>
+           <div class="grid-container">
+               <div class="testimonial-item neon-border animate-on-scroll" data-animation="fadeInLeft">
+                   <div class="testimonial-content">
+                       "This trading bot has completely transformed my financial future. In just 3 months, I've seen a 47% increase in my portfolio. It's incredibly easy to use, and the automation saves me hours every day!"
+                   </div>
+                   <div class="testimonial-author">
+                       <div class="testimonial-avatar">
+                           <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Testimonial">
+                       </div>
+                       <div class="author-details">
+                           <span class="author-name">John Doe</span>
+                           <span class="author-position">Retail Investor</span>
+                           <div class="rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="testimonial-item neon-border animate-on-scroll" data-animation="fadeInRight">
+                   <div class="testimonial-content">
+                       "I was skeptical at first, but the results speak for themselves. The bot's analytical precision is impressive, and I love how it works automatically. It's like having a professional trader working for me around the clock!"
+                   </div>
+                   <div class="testimonial-author">
+                       <div class="testimonial-avatar">
+                           <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Testimonial">
+                       </div>
+                       <div class="author-details">
+                           <span class="author-name">Jane Smith</span>
+                           <span class="author-position">Financial Analyst</span>
+                           <div class="rating">
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star"></i>
+                               <i class="fas fa-star-half-alt"></i>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- FAQ Section -->
+       <div class="section faq" id="faq">
+           <h2 class="animate-on-scroll" data-animation="fadeIn">Frequently Asked Questions</h2>
+           <div class="faq-container">
+               <div class="faq-item animate-on-scroll" data-animation="fadeIn">
+                   <div class="faq-question">
+                       <h3>How does the bot work?</h3>
+                       <i class="fas fa-chevron-down"></i>
+                   </div>
+                   <div class="faq-answer">
+                       <p>Our bot uses advanced AI algorithms and machine learning to analyze market trends, price movements, and multiple indicators in real-time. It identifies profitable trading opportunities and executes trades automatically based on your preferences and risk settings.</p>
+                   </div>
+               </div>
+               <div class="faq-item animate-on-scroll" data-animation="fadeIn">
+                   <div class="faq-question">
+                       <h3>Is it safe to use?</h3>
+                       <i class="fas fa-chevron-down"></i>
+                   </div>
+                   <div class="faq-answer">
+                       <p>Yes, our platform implements bank-level encryption and security protocols. We never store your trading platform credentials, and all connections are secured with advanced encryption. Your data privacy and security are our top priorities.</p>
+                   </div>
+               </div>
+               <div class="faq-item animate-on-scroll" data-animation="fadeIn">
+                   <div class="faq-question">
+                       <h3>What kind of returns can I expect?</h3>
+                       <i class="fas fa-chevron-down"></i>
+                   </div>
+                   <div class="faq-answer">
+                       <p>Results vary based on market conditions, your risk settings, and investment amount. Our average users report 15-30% monthly returns, but trading always involves risk and past performance is not indicative of future results.</p>
+                   </div>
+               </div>
+               <div class="faq-item animate-on-scroll" data-animation="fadeIn">
+                   <div class="faq-question">
+                       <h3>Do I need trading experience?</h3>
+                       <i class="fas fa-chevron-down"></i>
+                   </div>
+                   <div class="faq-answer">
+                       <p>No trading experience is required. Our platform is designed to be user-friendly for beginners while offering advanced features for experienced traders. We provide full training resources and 24/7 support to guide you.</p>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <!-- Footer -->
+   <footer>
+       <div class="container">
+           <div class="footer-content">
+               <div class="footer-section">
+                   <h3>About Us</h3>
+                   <p>We're a team of trading experts and AI developers dedicated to making automated trading accessible to everyone.</p>
+               </div>
+               <div class="footer-section">
+                   <h3>Contact Us</h3>
+                   <p>Email: info@binarybeast.com</p>
+                   <p>Support: 24/7 via WhatsApp</p>
+               </div>
+               <div class="footer-section">
+                   <h3>Follow Us</h3>
+                   <div class="social-links">
+                       <a href="#"><i class="fab fa-facebook-f"></i></a>
+                       <a href="#"><i class="fab fa-twitter"></i></a>
+                       <a href="#"><i class="fab fa-instagram"></i></a>
+                       <a href="#"><i class="fab fa-telegram"></i></a>
+                   </div>
+               </div>
+           </div>
+           <div class="footer-bottom">
+               <p>&copy; 2025 Binary Beast Trading Bot. All rights reserved.</p>
+           </div>
+       </div>
+   </footer>
+
+   <!-- Enhanced WhatsApp Button -->
+   <div class="floating-button">
+       <a href="https://chat.whatsapp.com/FKCn6m4yCmtK6CIllLzXIC" class="whatsapp-button">
+           <i class="fab fa-whatsapp"></i> Chat with us
+       </a>
+   </div>
+
+   <!-- Required Scripts -->
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+   <script>
+       // Page Loader
+       window.addEventListener('load', function() {
+           setTimeout(function() {
+               document.getElementById('pageLoader').classList.add('hidden');
+           }, 1500);
+       });
+
+       // Mobile Menu
+       document.getElementById('menuBtn').addEventListener('click', function() {
+           document.getElementById('mobileMenu').classList.add('open');
+       });
+
+       document.getElementById('closeMenu').addEventListener('click', function() {
+           document.getElementById('mobileMenu').classList.remove('open');
+       });
+
+       // Countdown Timer Script with improved animation
+       var countdownDate = new Date().getTime() + 30 * 60 * 1000; // Set the countdown to 30 minutes from now
+
+       var x = setInterval(function() {
+           var now = new Date().getTime();
+           var distance = countdownDate - now;
+
+           var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+           var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+           // Add leading zeros
+           minutes = minutes < 10 ? "0" + minutes : minutes;
+           seconds = seconds < 10 ? "0" + seconds : seconds;
+
+           document.getElementById("countdown").innerHTML = minutes + ":" + seconds;
+
+           if (distance < 0) {
+               clearInterval(x);
+               document.getElementById("countdown").innerHTML = "EXPIRED";
+               document.getElementById("trialMessage").innerHTML = "Trial Offer Expired!";
+               document.getElementById("countdown").style.color = "#ff3333";
+           }
+       }, 1000);
+
+       // Header Scroll Effect
+       window.addEventListener('scroll', function() {
+           const header = document.getElementById('header');
+           if (window.scrollY > 50) {
+               header.classList.add('scrolled');
+           } else {
+               header.classList.remove('scrolled');
+           }
+       });
+
+       // FAQ Accordion
+       document.querySelectorAll('.faq-item').forEach(item => {
+           item.addEventListener('click', event => {
+               item.classList.toggle('active');
+           });
+       });
+
+       // Particles.js Configuration
+       particlesJS("particles-js", {
+           "particles": {
+               "number": {
+                   "value": 80,
+                   "density": {
+                       "enable": true,
+                       "value_area": 800
+                   }
+               },
+               "color": {
+                   "value": ["#00f7ff", "#fc00ff", "#33ff33"]
+               },
+               "shape": {
+                   "type": "circle",
+                   "stroke": {
+                       "width": 0,
+                       "color": "#000000"
+                   }
+               },
+               "opacity": {
+                   "value": 0.5,
+                   "random": true,
+                   "anim": {
+                       "enable": true,
+                       "speed": 1,
+                       "opacity_min": 0.1,
+                       "sync": false
+                   }
+               },
+               "size": {
+                   "value": 3,
+                   "random": true,
+                   "anim": {
+                       "enable": true,
+                       "speed": 2,
+                       "size_min": 0.1,
+                       "sync": false
+                   }
+               },
+               "line_linked": {
+                   "enable": true,
+                   "distance": 150,
+                   "color": "#00f7ff",
+                   "opacity": 0.4,
+                   "width": 1
+               },
+               "move": {
+                   "enable": true,
+                   "speed": 2,
+                   "direction": "none",
+                   "random": true,
+                   "straight": false,
+                   "out_mode": "out",
+                   "bounce": false,
+                   "attract": {
+                       "enable": true,
+                       "rotateX": 600,
+                       "rotateY": 1200
+                   }
+               }
+           },
+           "interactivity": {
+               "detect_on": "canvas",
+               "events": {
+                   "onhover": {
+                       "enable": true,
+                       "mode": "grab"
+                   },
+                   "onclick": {
+                       "enable": true,
+                       "mode": "push"
+                   },
+                   "resize": true
+               },
+               "modes": {
+                   "grab": {
+                       "distance": 140,
+                       "line_linked": {
+                           "opacity": 1
+                       }
+                   },
+                   "bubble": {
+                       "distance": 400,
+                       "size": 40,
+                       "duration": 2,
+                       "opacity": 8,
+                       "speed": 3
+                   },
+                   "repulse": {
+                       "distance": 200,
+                       "duration": 0.4
+                   },
+                   "push": {
+                       "particles_nb": 4
+                   },
+                   "remove": {
+                       "particles_nb": 2
+                   }
+               }
+           },
+           "retina_detect": true
+       });
+
+       // Animate elements when they come into view
+       const animateOnScroll = function() {
+           const elements = document.querySelectorAll('.animate-on-scroll');
+           
+           elements.forEach(element => {
+               const elementPosition = element.getBoundingClientRect().top;
+               const windowHeight = window.innerHeight;
+               
+               if (elementPosition < windowHeight - 50) {
+                   const animation = element.dataset.animation || 'fadeIn';
+                   element.style.animation = `${animation} 1s forwards`;
+                   element.classList.remove('animate-on-scroll');
+               }
+           });
+       };
+
+       // Run animation check on scroll and page load
+       window.addEventListener('scroll', animateOnScroll);
+       window.addEventListener('load', animateOnScroll);
+
+       // Animate number counters
+       const animateCounters = function() {
+           const counters = document.querySelectorAll('.stat-counter');
+           
+           counters.forEach(counter => {
+               const target = parseInt(counter.getAttribute('data-count'));
+               const duration = 2000; // 2 seconds
+               const startTime = Date.now();
+               
+               const updateCounter = () => {
+                   const currentTime = Date.now();
+                   const progress = Math.min((currentTime - startTime) / duration, 1);
+                   
+                   const currentValue = Math.floor(progress * target);
+                   counter.textContent = currentValue;
+                   
+                   if (progress < 1) {
+                       requestAnimationFrame(updateCounter);
+                   } else {
+                       counter.textContent = target;
+                   }
+               };
+               
+               updateCounter();
+           });
+       };
+
+       // Animate progress bars
+       const animateProgressBars = function() {
+           const progressBars = document.querySelectorAll('.progress-fill');
+           
+           progressBars.forEach(bar => {
+               const target = parseInt(bar.getAttribute('data-progress'));
+               setTimeout(() => {
+                   bar.style.width = target + '%';
+               }, 500);
+           });
+       };
+
+       // Create chart for trading performance
+       const createTradingChart = function() {
+           const ctx = document.createElement('canvas');
+           document.getElementById('tradingChart').appendChild(ctx);
+           
+           const tradingData = {
+               labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+               datasets: [{
+                   label: 'Monthly Returns (%)',
+                   data: [12, 19, 15, 22, 18, 25, 23, 27, 24],
+                   borderColor: '#00f7ff',
+                   backgroundColor: 'rgba(0, 247, 255, 0.1)',
+                   borderWidth: 3,
+                   tension: 0.4,
+                   fill: true
+               }]
+           };
+           
+           new Chart(ctx, {
+               type: 'line',
+               data: tradingData,
+               options: {
+                   responsive: true,
+                   maintainAspectRatio: false,
+                   plugins: {
+                       legend: {
+                           labels: {
+                               color: 'white'
+                           }
+                       }
+                   },
+                   scales: {
+                       y: {
+                           beginAtZero: true,
+                           grid: {
+                               color: 'rgba(255, 255, 255, 0.1)'
+                           },
+                           ticks: {
+                               color: 'white'
+                           }
+                       },
+                       x: {
+                           grid: {
+                               color: 'rgba(255, 255, 255, 0.1)'
+                           },
+                           ticks: {
+                               color: 'white'
+                           }
+                       }
+                   }
+               }
+           });
+       };
+
+       // Run animations when elements are in view
+       window.addEventListener('load', function() {
+           setTimeout(function() {
+               animateCounters();
+               animateProgressBars();
+               createTradingChart();
+           }, 1600); // Slightly after page loader finishes
+       });
+
+       // Add hover effects for neon items
+       document.querySelectorAll('.neon-border').forEach(item => {
+           item.addEventListener('mouseenter', function() {
+               this.style.boxShadow = '0 0 25px rgba(0, 247, 255, 0.8)';
+           });
+           item.addEventListener('mouseleave', function() {
+               this.style.boxShadow = '0 0 15px rgba(0, 247, 255, 0.3)';
+           });
+       });
+   </script>
+</body>
+</html>
